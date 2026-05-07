@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <section class="hero">
+        <h1>Movies Recommendation System</h1>
+        <p>Search and explore movie recommendations</p>
+    </section>
+    <div class="search-area">
+        <div class="search-box">
+            <input id="searchInput" placeholder="Search movies based on name, genre, cast and crew">
+            <!-- <button id="recommendBtn">Recommend</button> -->
+            <button id="recommendBtn">
+                <span id="btnText">Recommend</span>
+                <i id="btnLoader" class="fa-solid fa-spinner fa-spin hidden"></i>
+            </button>
+        </div>
+    </div>
+    <section class="movies" id="moviesContainer"></section>
+    <div class="chat-wrapper" id="chatWrapper">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <span>Movie Assistant</span>
+                <button onclick="toggleChat()">×</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">Hi! Click the ✨ icon on any movie to learn more.</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Ask about a movie...">
+                <button onclick="handleManualChat()">Send</button>
+            </div>
+        </div>
+        <button class="chat-launcher" onclick="toggleChat()">
+            <i>💬</i>
+        </button>
+    </div>
+    <script src="../static/script.js" defer></script>
+</body>
+
+</html>
